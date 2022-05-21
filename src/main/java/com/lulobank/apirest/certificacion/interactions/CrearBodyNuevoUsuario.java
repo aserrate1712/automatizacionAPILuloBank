@@ -1,6 +1,7 @@
 package com.lulobank.apirest.certificacion.interactions;
 
 import com.lulobank.apirest.certificacion.model.DataUsers;
+import com.lulobank.apirest.certificacion.util.OrganizarDatosEntrada;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
@@ -32,8 +33,7 @@ public class CrearBodyNuevoUsuario implements Interaction {
                 "\"job\":\""+datosiniciales.get(0).getJob()+",\"\n" +
                 "}";
         LOGGER.info(registerinforeqres);
-        listadatosesp.add(datosiniciales.get(0).getName());
-        listadatosesp.add(datosiniciales.get(0).getJob());
+        listadatosesp = OrganizarDatosEntrada.paravalidarcreciondeusuarios(datosiniciales);
         actor.remember("listadatosesp",listadatosesp);
         actor.remember("bodynuevousuario",registerinforeqres);
     }

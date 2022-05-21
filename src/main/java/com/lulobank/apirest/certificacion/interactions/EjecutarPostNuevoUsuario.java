@@ -21,7 +21,6 @@ public class EjecutarPostNuevoUsuario implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        String hola="hola";
         String body= actor.recall("bodynuevousuario");
         actor.attemptsTo(
                 Post.to(endpoint.trim()).with(
@@ -30,8 +29,6 @@ public class EjecutarPostNuevoUsuario implements Interaction {
                                 .body(body)
                 )
         );
-        //realizar la conversion a una lista sencilla en este apartado
-
     }
 
     public static EjecutarPostNuevoUsuario conendpoint(String endpoint)

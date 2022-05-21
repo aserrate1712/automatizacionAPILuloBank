@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>realizar una peticion POST para verificar que la creacion de un usuario fue satisfactoria</title>
+    <title>realizar una peticion GET para verificar la existencia de un usuario previamente creado por su id</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -127,7 +127,7 @@
             <a href="index.html" class="breadcrumbs">Home</a>
 
             > <a href="ca535d4ebefa273ee68a84c1c06c8e3b6b1cc0f2cb7eeb6348fd984fd6715a3f.html">Verificar La Creacion De Un Usuario Por Medio De La APIREST REQREST</a>
-        > realizar una peticion POST para verificar que la creacion de un usuario fue satisfactoria
+        > realizar una peticion GET para verificar la existencia de un usuario previamente creado por su id
         </span>
         </div>
         <div class="rightbg"></div>
@@ -173,7 +173,7 @@
                                 <p class="tag">
                                     <span class="badge tag-badge" style="background:default;">
                                     <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;"
-                                                                      href="604c43d41335563d723fb6cd47503fc01187de29309d4042913888788d2272bf.html">Creacionusuariopost
+                                                                      href="b750855c22424d5f405d02d07922dc331b0ccbc8f5b529fc33eec05ed08d31a9.html">Obtenerusuarioget
                                     (tag)</a>
                                 </span>
                                 </p>
@@ -188,7 +188,7 @@
                             <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
                                 <span class="success-color">
-                                    realizar una peticion POST para verificar que la creacion de un usuario fue satisfactoria
+                                    realizar una peticion GET para verificar la existencia de un usuario previamente creado por su id
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -250,7 +250,7 @@
         <div class="story-title">
             <h3 class="story-header">Scenario Outline</h3>
 
-            <div class="scenario">Dado que el usuario crea una peticion con la informacion inicial<br><table class='embedded'><thead><th>name</th><th>job</th></thead><tbody><tr><td>&lt;name&gt;</td><td>&lt;job&gt;</td></tr></tbody></table><br>Cuando el usuario realice una peticion de tipo POST sobre el endpoint /api/users<br>Entonces verifica la creacion de usuario por medio de una respuesta 201 y con la informacion inicial</div>
+            <div class="scenario">Dado que el usuario desea consultar la existencia de un usuario previamente creado con datos<br><table class='embedded'><thead><th>id</th><th>email</th><th>first_name</th><th>last_name</th><th>avatar</th></thead><tbody><tr><td>&lt;id&gt;</td><td>&lt;email&gt;</td><td>&lt;first_name&gt;</td><td>&lt;last_name&gt;</td><td>&lt;avatar&gt;</td></tr></tbody></table><br>Cuando el usuario realice una peticion de tipo GET sobre un usuario usando el endpoint /api/users/<br>Entonces verifica la existencia del usuario por medio de una respuesta 200 y con la informacion inicial</div>
 
         </div>
 
@@ -269,27 +269,48 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                            <th>Name</th>
-                            <th>Job</th>
+                            <th>Id</th>
+                            <th>Email</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Avatar</th>
                     </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="test-SUCCESS"><a href="#0">1</a></td>
                                 <td class="test-SUCCESS"><a
-                                            href="#0">alejandro Serrate x</a>
+                                            href="#0">12</a>
                                 </td>
                                 <td class="test-SUCCESS"><a
-                                            href="#0">automatizator</a>
+                                            href="#0">rachel.howell@reqres.in</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#0">Rachel</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#0">Howell</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#0">https://reqres.in/img/faces/12-image.jpg</a>
                                 </td>
                         </tr>
                         <tr>
                             <td class="test-SUCCESS"><a href="#1">2</a></td>
                                 <td class="test-SUCCESS"><a
-                                            href="#1">juan camilo herrera</a>
+                                            href="#1">8</a>
                                 </td>
                                 <td class="test-SUCCESS"><a
-                                            href="#1">developer</a>
+                                            href="#1">lindsay.ferguson@reqres.in</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#1">Lindsay</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#1">Ferguson</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#1">https://reqres.in/img/faces/8-image.jpg</a>
                                 </td>
                         </tr>
                     </tbody>
@@ -329,7 +350,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Example: {name=alejandro Serrate x, job=automatizator}
+                                                Example: {id=12, email=rachel.howell@reqres.in, first_name=Rachel, last_name=Howell, avatar=https://reqres.in/img/faces/12-image.jpg}
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -338,7 +359,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">4.65s</span></td>
+                        <td width="100"><span class="top-level-step">0.56s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -348,69 +369,7 @@
 
                         <td width="70" class="step-icon">
                             <a name="0-0"></a>
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
-                                   style="display:block">
-                                    <i class="fa fa-plus-square-o imgstepSection0-0 success-icon"
-                                       style="margin-left: 40px; float:left; padding-right:5px"></i>
-                                </a>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0')"
-                                   style="display:block;">
-                                    <span class="nested-step">
-                                                Dado que el usuario crea una peticion con la informacion inicial<br><table class='embedded'><thead><th>name</th><th>job</th></thead><tbody><tr><td>alejandro Serrate x</td><td>automatizator</td></tr></tbody></table>
-                                        </span>
-                                </a>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                        <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.25s</span></td>
-                    </tr>
-                        <tr>
-                            <td colspan="5">
-                                <table id="stepSection0-0" class="step-table-nested" style="display:none;">
-
-                    <tr class="test-SUCCESS">
-
-                        <td width="90" class="step-icon">
-                            <a name="0-0-0"></a>
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0-0')"
-                                   style="display:block">
-                                    <i class="fa fa-plus-square-o imgstepSection0-0-0 success-icon"
-                                       style="margin-left: 60px; float:left; padding-right:5px"></i>
-                                </a>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-0-0')"
-                                   style="display:block;">
-                                    <span class="nested-step">
-                                                Alejandro crear peticion con informacion
-                                        </span>
-                                </a>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                        <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.03s</span></td>
-                    </tr>
-                        <tr>
-                            <td colspan="5">
-                                <table id="stepSection0-0-0" class="step-table-nested" style="display:none;">
-
-                    <tr class="test-SUCCESS">
-
-                        <td width="110" class="step-icon">
-                            <a name="0-0-0-0"></a>
-                                <span style="margin-left: 80px;"
+                                <span style="margin-left: 40px;"
                                       class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
                                 </span>
                         </td>
@@ -418,7 +377,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Alejandro crear body nuevo usuario
+                                                Dado que el usuario desea consultar la existencia de un usuario previamente creado con datos<br><table class='embedded'><thead><th>id</th><th>email</th><th>first_name</th><th>last_name</th><th>avatar</th></thead><tbody><tr><td>12</td><td>rachel.howell@reqres.in</td><td>Rachel</td><td>Howell</td><td>https://reqres.in/img/faces/12-image.jpg</td></tr></tbody></table>
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -426,16 +385,8 @@
                         </td>
 
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">0.02s</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
                     </tr>
-
-                                </table>
-                            </td>
-                        </tr>
-
-                                </table>
-                            </td>
-                        </tr>
                     <tr class="test-SUCCESS">
 
                         <td width="70" class="step-icon">
@@ -452,7 +403,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Cuando el usuario realice una peticion de tipo POST sobre el endpoint /api/users
+                                                Cuando el usuario realice una peticion de tipo GET sobre un usuario usando el endpoint /api/users/
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -461,7 +412,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">4.04s</span></td>
+                        <td width="100"><span class="nested-step">0.54s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -483,7 +434,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1-0')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Alejandro post nuevo usuario
+                                                Alejandro get usuario existente
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -492,7 +443,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">4.02s</span></td>
+                        <td width="100"><span class="nested-step">0.53s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -514,7 +465,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1-0-0')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Alejandro ejecutar post nuevo usuario
+                                                Alejandro ejecutar get usuario existente
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -523,7 +474,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">4.01s</span></td>
+                        <td width="100"><span class="nested-step">0.53s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -545,7 +496,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1-0-0-0')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Alejandro executes a POST on the resource /api/users
+                                                Alejandro executes a GET on the resource /api/users/12
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -554,7 +505,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">3.95s</span></td>
+                        <td width="100"><span class="nested-step">0.53s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -572,34 +523,34 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                POST https://reqres.in/api/users
+                                                GET https://reqres.in/api/users/12
                                         </span>
                                 <span class="evidence">
                                         <span class="piece-of-evidence">
                     <span>
                         <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
-                                data-target="#restModal-REST-9">
+                                data-target="#restModal-REST-7">
                             REST Query
                         </button>
                     </span>
                     <!-- Modal -->
                     <div class="rest-query-details">
-                        <div class="collapse multi-collapse" id="restModal-REST-9">
+                        <div class="collapse multi-collapse" id="restModal-REST-7">
                             <div class="card">
                                 <div class="card-body">
                                     <h4>Response</h4>
-                                        <p>Status code: 201</p>
-                                        <p>Content Type: application/json</p>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
                                         <h4>Request Headers</h4>
-                                        <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
+                                        <pre>Accept=*/*</pre>
                                         <h4>Content Body</h4>
-                                        <pre>{<br>    &quot;name&quot;: &quot;alejandro Serrate x&quot;,<br>    &quot;job&quot;: &quot;automatizator,&quot;<br>}</pre>
+                                        <pre></pre>
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Date: Sat, 21 May 2022 20:38:43 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 101<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;65-tnSdnrWGm1bDIkEQwvLpPAIPSw0&quot;<br>Via: 1.1 vegur<br>CF-Cache-Status: DYNAMIC<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=i6vmADkK2zAgxQpdQ5uWSI2shgZIXUb195Y5ziKJBafjvbMKTKfLHLxeFAA%2BzZWC5qMhrWOV0P8kQBi5VmTYAi%2FXz5DOff5tpy94xv5ESFiZFYF8X2SU0tE4Msk%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 70f01e082ca7e78c-MDE<br>alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400</pre>
+                                        <pre>Date: Sat, 21 May 2022 20:38:46 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;11c-Y8Nrcu5DO2DrJvfp3zc2PKGiar4&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: MISS<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=SXAr4NI1EDT1Sf51MI%2FWbF8I2mn%2F1pVB0LFG8Gb3w8v47gQycHSHyfZRkG5LzP3Y8lR4jaVzp%2FwTyyVFi5%2BKdchnrmxH16eQslh77lBqBEYJeoDLRMN%2F6Sldz48%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 70f01e177bcaf897-MDE<br>Content-Encoding: gzip<br>alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400</pre>
                                     <h4>Response Body</h4>
-                                        <pre>{<br>    &quot;name&quot;: &quot;alejandro Serrate x&quot;,<br>    &quot;job&quot;: &quot;automatizator,&quot;,<br>    &quot;id&quot;: &quot;3&quot;,<br>    &quot;createdAt&quot;: &quot;2022-05-21T20:38:43.650Z&quot;<br>}</pre>
+                                        <pre>{<br>    &quot;data&quot;: {<br>        &quot;id&quot;: 12,<br>        &quot;email&quot;: &quot;rachel.howell@reqres.in&quot;,<br>        &quot;first_name&quot;: &quot;Rachel&quot;,<br>        &quot;last_name&quot;: &quot;Howell&quot;,<br>        &quot;avatar&quot;: &quot;https://reqres.in/img/faces/12-image.jpg&quot;<br>    },<br>    &quot;support&quot;: {<br>        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,<br>        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;<br>    }<br>}</pre>
                                 </div>
                             </div>
                         </div>
@@ -644,7 +595,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Entonces verifica la creacion de usuario por medio de una respuesta 201 y con la informacion inicial
+                                                Entonces verifica la existencia del usuario por medio de una respuesta 200 y con la informacion inicial
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -653,7 +604,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.25s</span></td>
+                        <td width="100"><span class="nested-step">0.02s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -671,7 +622,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Then la respuesta del servicio fue: should be (201)
+                                                Then la respuesta del servicio fue: should be (200)
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -679,7 +630,7 @@
                         </td>
 
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">0.02s</span></td>
+                        <td width="100"><span class="nested-group-step">0s</span></td>
                     </tr>
                     <tr class="test-SUCCESS">
 
@@ -693,7 +644,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Then la respuesta de los datos del servicio fue: should be ([alejandro Serrate x, automatizator])
+                                                Then la respuesta de los datos del servicio fue: should be ([12, rachel.howell@reqres.in, Rachel, Howell, https://reqres.in/img/faces/12-image.jpg])
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -727,7 +678,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Example: {name=juan camilo herrera, job=developer}
+                                                Example: {id=8, email=lindsay.ferguson@reqres.in, first_name=Lindsay, last_name=Ferguson, avatar=https://reqres.in/img/faces/8-image.jpg}
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -736,7 +687,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">0.64s</span></td>
+                        <td width="100"><span class="top-level-step">0.2s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -746,69 +697,7 @@
 
                         <td width="70" class="step-icon">
                             <a name="1-0"></a>
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
-                                   style="display:block">
-                                    <i class="fa fa-plus-square-o imgstepSection1-0 success-icon"
-                                       style="margin-left: 40px; float:left; padding-right:5px"></i>
-                                </a>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
-                                   style="display:block;">
-                                    <span class="nested-step">
-                                                Dado que el usuario crea una peticion con la informacion inicial<br><table class='embedded'><thead><th>name</th><th>job</th></thead><tbody><tr><td>juan camilo herrera</td><td>developer</td></tr></tbody></table>
-                                        </span>
-                                </a>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                        <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.02s</span></td>
-                    </tr>
-                        <tr>
-                            <td colspan="5">
-                                <table id="stepSection1-0" class="step-table-nested" style="display:none;">
-
-                    <tr class="test-SUCCESS">
-
-                        <td width="90" class="step-icon">
-                            <a name="1-0-0"></a>
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0-0')"
-                                   style="display:block">
-                                    <i class="fa fa-plus-square-o imgstepSection1-0-0 success-icon"
-                                       style="margin-left: 60px; float:left; padding-right:5px"></i>
-                                </a>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0-0')"
-                                   style="display:block;">
-                                    <span class="nested-step">
-                                                Alejandro crear peticion con informacion
-                                        </span>
-                                </a>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                        <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.02s</span></td>
-                    </tr>
-                        <tr>
-                            <td colspan="5">
-                                <table id="stepSection1-0-0" class="step-table-nested" style="display:none;">
-
-                    <tr class="test-SUCCESS">
-
-                        <td width="110" class="step-icon">
-                            <a name="1-0-0-0"></a>
-                                <span style="margin-left: 80px;"
+                                <span style="margin-left: 40px;"
                                       class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
                                 </span>
                         </td>
@@ -816,7 +705,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Alejandro crear body nuevo usuario
+                                                Dado que el usuario desea consultar la existencia de un usuario previamente creado con datos<br><table class='embedded'><thead><th>id</th><th>email</th><th>first_name</th><th>last_name</th><th>avatar</th></thead><tbody><tr><td>8</td><td>lindsay.ferguson@reqres.in</td><td>Lindsay</td><td>Ferguson</td><td>https://reqres.in/img/faces/8-image.jpg</td></tr></tbody></table>
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -826,14 +715,6 @@
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
                         <td width="100"><span class="nested-group-step">0s</span></td>
                     </tr>
-
-                                </table>
-                            </td>
-                        </tr>
-
-                                </table>
-                            </td>
-                        </tr>
                     <tr class="test-SUCCESS">
 
                         <td width="70" class="step-icon">
@@ -850,7 +731,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Cuando el usuario realice una peticion de tipo POST sobre el endpoint /api/users
+                                                Cuando el usuario realice una peticion de tipo GET sobre un usuario usando el endpoint /api/users/
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -859,7 +740,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.62s</span></td>
+                        <td width="100"><span class="nested-step">0.19s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -881,7 +762,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1-0')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Alejandro post nuevo usuario
+                                                Alejandro get usuario existente
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -890,7 +771,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.62s</span></td>
+                        <td width="100"><span class="nested-step">0.19s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -912,7 +793,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1-0-0')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Alejandro ejecutar post nuevo usuario
+                                                Alejandro ejecutar get usuario existente
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -921,7 +802,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.62s</span></td>
+                        <td width="100"><span class="nested-step">0.19s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -943,7 +824,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1-0-0-0')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Alejandro executes a POST on the resource /api/users
+                                                Alejandro executes a GET on the resource /api/users/8
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -952,7 +833,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.62s</span></td>
+                        <td width="100"><span class="nested-step">0.17s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -970,34 +851,34 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                POST https://reqres.in/api/users
+                                                GET https://reqres.in/api/users/8
                                         </span>
                                 <span class="evidence">
                                         <span class="piece-of-evidence">
                     <span>
                         <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
-                                data-target="#restModal-REST-21">
+                                data-target="#restModal-REST-17">
                             REST Query
                         </button>
                     </span>
                     <!-- Modal -->
                     <div class="rest-query-details">
-                        <div class="collapse multi-collapse" id="restModal-REST-21">
+                        <div class="collapse multi-collapse" id="restModal-REST-17">
                             <div class="card">
                                 <div class="card-body">
                                     <h4>Response</h4>
-                                        <p>Status code: 201</p>
-                                        <p>Content Type: application/json</p>
+                                        <p>Status code: 200</p>
+                                        <p>Content Type: null</p>
                                         <h4>Request Headers</h4>
-                                        <pre>Accept=*/*<br>Content-Type=application/json; charset=UTF-8</pre>
+                                        <pre>Accept=*/*</pre>
                                         <h4>Content Body</h4>
-                                        <pre>{<br>    &quot;name&quot;: &quot;juan camilo herrera&quot;,<br>    &quot;job&quot;: &quot;developer,&quot;<br>}</pre>
+                                        <pre></pre>
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Date: Sat, 21 May 2022 20:38:44 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 99<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;63-89K0dekXff7pxdoEtNmEGvD2+1Q&quot;<br>Via: 1.1 vegur<br>CF-Cache-Status: DYNAMIC<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=xMjYKbxgi5TPAvO8jV5mR44PrG6zf0OhU7z7CT0d00DXu0%2BRyZMp8uCeRY6EyMLjlTFjWh9qC1HF1z9uxgB3G0BURj%2BE0VO5w0DGoDMFeEfgoYO7g0LYCmzgzug%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Server: cloudflare<br>CF-RAY: 70f01e0f0bf2f89b-MDE<br>alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400</pre>
+                                        <pre>Date: Sat, 21 May 2022 20:38:46 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;120-RoDZ6pcUSEAULx3OonAt9LkYOi4&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: HIT<br>Age: 3614<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=GvVo6ltLpacfeW3GQIGsSM1vV8jLQiGHtcr3u%2FaiXhpftZ6wngs%2BYN5WncFFl4QLd%2BvKX7mHXrrC03iuC%2BKOwTONNdgQpAvdo3JoIuJCXgggkhJv8v1R4Jp70xk%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 70f01e1aecbaf893-MDE<br>Content-Encoding: gzip<br>alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400</pre>
                                     <h4>Response Body</h4>
-                                        <pre>{<br>    &quot;name&quot;: &quot;juan camilo herrera&quot;,<br>    &quot;job&quot;: &quot;developer,&quot;,<br>    &quot;id&quot;: &quot;802&quot;,<br>    &quot;createdAt&quot;: &quot;2022-05-21T20:38:44.595Z&quot;<br>}</pre>
+                                        <pre>{<br>    &quot;data&quot;: {<br>        &quot;id&quot;: 8,<br>        &quot;email&quot;: &quot;lindsay.ferguson@reqres.in&quot;,<br>        &quot;first_name&quot;: &quot;Lindsay&quot;,<br>        &quot;last_name&quot;: &quot;Ferguson&quot;,<br>        &quot;avatar&quot;: &quot;https://reqres.in/img/faces/8-image.jpg&quot;<br>    },<br>    &quot;support&quot;: {<br>        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,<br>        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;<br>    }<br>}</pre>
                                 </div>
                             </div>
                         </div>
@@ -1042,7 +923,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-2')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Entonces verifica la creacion de usuario por medio de una respuesta 201 y con la informacion inicial
+                                                Entonces verifica la existencia del usuario por medio de una respuesta 200 y con la informacion inicial
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -1069,7 +950,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Then la respuesta del servicio fue: should be (201)
+                                                Then la respuesta del servicio fue: should be (200)
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -1091,7 +972,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Then la respuesta de los datos del servicio fue: should be ([juan camilo herrera, developer])
+                                                Then la respuesta de los datos del servicio fue: should be ([8, lindsay.ferguson@reqres.in, Lindsay, Ferguson, https://reqres.in/img/faces/8-image.jpg])
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -1112,7 +993,7 @@
                 <tr class="test-SUCCESS">
                         <td colspan="2"></td>
                     <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>5.41s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>0.76s</em></span></td>
                 </tr>
 
             </table>

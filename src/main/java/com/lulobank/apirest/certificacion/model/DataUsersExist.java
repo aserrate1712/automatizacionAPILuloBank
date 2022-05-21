@@ -1,20 +1,17 @@
 package com.lulobank.apirest.certificacion.model;
 
-public class DataUsers {
-
-    private String name;
-    private String job;
-    private String id;
+public class DataUsersExist {
+    private int id;
     private String email;
     private String first_name;
     private String last_name;
     private String avatar;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -48,32 +45,5 @@ public class DataUsers {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
-    }
-
-    public DataUsers(String name, String job,String id,String email, String first_name, String last_name,String avatar)
-    {
-        this.name=name;
-        this.job=job;
-        this.id=id;
-        this.email=email;
-        this.first_name=first_name;
-        this.last_name=last_name;
-        this.avatar=avatar;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getJob() {
-        return job;
-    }
-
-    public void setJob(String job) {
-        this.job = job;
     }
 }
