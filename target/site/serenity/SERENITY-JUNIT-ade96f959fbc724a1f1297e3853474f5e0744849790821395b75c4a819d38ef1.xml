@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Verificar la creacion de un usuario por medio de la APIREST REQREST" skipped="0" tests="2" time="6.7" timestamp="2022-05-20 11:04:58"><testcase name="realizar una peticion POST para verificar que la creacion de un usuario fue satisfactoria"/></testsuite>
