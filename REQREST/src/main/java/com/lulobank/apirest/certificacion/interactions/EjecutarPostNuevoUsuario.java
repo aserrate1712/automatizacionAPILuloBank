@@ -1,14 +1,11 @@
 package com.lulobank.apirest.certificacion.interactions;
 
-import com.lulobank.apirest.certificacion.model.DataUsers;
 import io.restassured.http.ContentType;
-import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.rest.interactions.Post;
 
-import java.util.List;
 
 public class EjecutarPostNuevoUsuario implements Interaction {
 

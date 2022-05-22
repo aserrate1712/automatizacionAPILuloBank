@@ -5,17 +5,12 @@ import com.lulobank.apirest.certificacion.questions.VerificaLaCreacionDelUsuario
 import com.lulobank.apirest.certificacion.questions.VerificaLaExistenciaDeUnUsuario;
 import com.lulobank.apirest.certificacion.questions.VerificaLaExistenciaDeUsuarios;
 import com.lulobank.apirest.certificacion.tasks.*;
-import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
-import net.serenitybdd.screenplay.actors.OnlineCast;
-import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
-
 import java.util.List;
 import java.util.Map;
-
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static org.hamcrest.Matchers.*;
@@ -34,14 +29,6 @@ public class ApirestReqStepsDefinitions {
                 entry.get("last_name"),
                 entry.get("avatar")
         );
-    }
-
-    @Before
-    public void setUp() {
-        String restAPIURL="https://reqres.in";
-        setTheStage(new OnlineCast());
-        theActorCalled("Alejandro");
-        theActorInTheSpotlight().whoCan(CallAnApi.at(restAPIURL));
     }
 
     @Dado("que el usuario crea una peticion con la informacion inicial$")
