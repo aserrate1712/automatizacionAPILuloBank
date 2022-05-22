@@ -18,10 +18,10 @@ Por defecto, los tests corren haciendo uso la herramienta de serenity REST
 
 ## Herramientas de compilación 
 
-# ![Serenity BDD](docs/gradle.png "Logo Title Text 1")
+# ![Serenity BDD](docs/maven.png "Logo Title Text 1")
 
 
-### Gradle
+### Maven
 
 * Es un gestor de proyectos.
 
