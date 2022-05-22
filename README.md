@@ -1,20 +1,51 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Automatización API REQREST
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+# ![Serenity BDD](Autotriage General/AutotriageGeneral/docs/serenity.png "Logo Title Text 1")
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## Framework
+
+* Serenity: Se utiliza como framework Serenity BDD, que utiliza los resultados de las pruebas para realizar la documentación describiendo lo que hace la aplicación, informa que pruebas se han realizado, las pruebas que fallaron y las que pasaron. 
+
+## Patron de desarrollo
+
+* Se utiliza Screenplay pattern ya que esta centrado en el usuario y orientado a tareas, utiliza los principios S.O.L.I.D. Con screenplay se puede escribir el código en un lenguaje mas natural.
+
+## Herramientas de compilación 
+
+# ![Serenity BDD](Autotriage General/AutotriageGeneral/docs/gradle.png "Logo Title Text 1")
+
+
+### Maven
+
+* Es un gestor de proyectos.
+
+# ![Serenity BDD](Autotriage General/AutotriageGeneral/docs/cucumber.png "Logo Title Text 1")
+
+### Cucumber
+
+* Es una herramienta que permite escribir los casos de prueba en un lenguaje orientado al negocio (Gherkin).
+
+## La estructura completa del proyecto es la siguiente:
+
+* Features: Utiliza lenguaje Gherkin y contienen los escenarios de negocio del caso de prueba. 
+* Tasks: Clases que representan tareas que realiza el actor a nivel de proceso de negocio. 
+* Questions: Comprueban los resultados de las operaciones realizadas. 
+* Exceptions: Son las excepciones que se visualizan cuando un test falla o tiene errores. 
+* Interfaces: Es una clase abstracta que se utiliza para agrupar métodos relacionados con cuerpos vacíos.
+* Abilities: Son las habilidades que requiere el actor para realizar cierta actividad.
+* Interactions: Indican acciones como dar clic, select,  enviar datos, scroll, entre otras cosas.
+* Models: Estas clases representan abstracciones de objetos que hacen parte de la aplicación o del negocio.
+* Fillo: Es la libreria que nos permite integrar la data desde un archivo de excel
+
+# Requerimientos
+
+* Java JDK 1.8 
+* Gestor de proyectos Gradle 
+ 
+
+
+## Autores
+
+Brayan Yamid Granado - byamid@qvision.com.co 
