@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Verificar la creacion de un usuario por medio de la APIREST REQREST" skipped="0" tests="2" time="4.8" timestamp="2022-05-21 03:36:53"><testcase name="realizar una peticion DELETE para eliminar un usuario existente"/></testsuite>
