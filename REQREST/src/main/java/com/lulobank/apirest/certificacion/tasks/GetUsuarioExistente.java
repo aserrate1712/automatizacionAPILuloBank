@@ -1,7 +1,6 @@
 package com.lulobank.apirest.certificacion.tasks;
 
 import com.lulobank.apirest.certificacion.interactions.EjecutarGetUsuarioExistente;
-import com.lulobank.apirest.certificacion.interactions.EjecutarGetUsuariosExistentes;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

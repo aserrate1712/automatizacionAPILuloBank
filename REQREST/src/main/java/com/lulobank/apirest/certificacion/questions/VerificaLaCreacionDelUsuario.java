@@ -1,14 +1,11 @@
 package com.lulobank.apirest.certificacion.questions;
 
 import com.lulobank.apirest.certificacion.model.DataNewUsers;
-import com.lulobank.apirest.certificacion.model.DataUsers;
-import com.lulobank.apirest.certificacion.util.OrganizarDatosEntrada;
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Question;
 import java.util.ArrayList;
 import java.util.List;
 
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 
 public class VerificaLaCreacionDelUsuario {

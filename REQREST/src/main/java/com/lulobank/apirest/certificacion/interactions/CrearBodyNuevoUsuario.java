@@ -5,14 +5,10 @@ import com.lulobank.apirest.certificacion.util.OrganizarDatosEntrada;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
-
 import java.util.ArrayList;
-import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import java.util.List;
 
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class CrearBodyNuevoUsuario implements Interaction {
 
