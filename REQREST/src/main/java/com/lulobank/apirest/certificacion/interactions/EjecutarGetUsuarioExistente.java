@@ -20,9 +20,10 @@ public class EjecutarGetUsuarioExistente implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        List<DataUsers> listadatos= actor.recall("datosexistentes");
-        List<String>listadatosexistentes= OrganizarDatosEntrada.paravalidarusuariosexistentes(listadatos);
-        actor.remember("listadatosexistentes",listadatosexistentes);
+        //List<DataUsers> listadatos= actor.recall("datosexistentes");
+        //List<String>listadatosexistentes= OrganizarDatosEntrada.paravalidarusuariosexistentes(listadatos);
+        //actor.remember("listadatosexistentes",listadatosexistentes);
+        List<String>listadatosexistentes = actor.recall("listadatosexistentes");
         actor.attemptsTo(
                 Get.resource(endpoint+listadatosexistentes.get(0)).with(
                         requestSpecification -> requestSpecification

@@ -1,7 +1,7 @@
 # language: es
-Característica: Verificar la creacion de un usuario por medio de la API REQREST
-  Yo como usuario de la aplicacion REQREST deseo verificar que la creacion de un usuario por medio de una
-  peticion POST funciona correctamente
+Característica: Verificar el funcionamiento de la API REQREST por medio de diferenes peticiones
+  Yo como usuario de la aplicacion REQREST deseo verificar el funcionamiento de la API REQREST realizando
+  peticiones de GET,POST,PUT y DELETE
 
   @creacionusuarioPOST
   Esquema del escenario: realizar una peticion POST para verificar que la creacion de un usuario fue satisfactoria

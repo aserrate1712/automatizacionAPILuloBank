@@ -29,8 +29,6 @@ public class CrearBodyNuevoUsuario implements Interaction {
                 "\"job\":\""+datosiniciales.get(0).getJob()+",\"\n" +
                 "}";
         LOGGER.info(registerinforeqres);
-        listadatosesp = OrganizarDatosEntrada.paravalidarcreciondeusuarios(datosiniciales);
-        actor.remember("listadatosesp",listadatosesp);
         actor.remember("bodynuevousuario",registerinforeqres);
     }
     public static CrearBodyNuevoUsuario coninformacion(List<DataUsers> datosiniciales)

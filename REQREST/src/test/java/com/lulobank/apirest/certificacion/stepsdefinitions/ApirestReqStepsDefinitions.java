@@ -33,12 +33,13 @@ public class ApirestReqStepsDefinitions {
 
     @Dado("que el usuario crea una peticion con la informacion inicial$")
     public void queElUsuarioCreaUnaPeticionConLaInformacionInicial(List<DataUsers> data) {
+        theActorInTheSpotlight().attemptsTo(OrganizacionDatos.paranuevosusuarios(data));
         theActorInTheSpotlight().attemptsTo(CrearPeticionConInformacion.inicial(data));
     }
 
     @Dado("que el usuario desea consultar la existencia de un usuario previamente creado con datos")
     public void queElUsuarioDeseaConsultarLaExistenciaDeUnUsuarioPreviamenteCreadoConDatos(List<DataUsers> data) {
-        theActorInTheSpotlight().remember("datosexistentes",data);
+        theActorInTheSpotlight().attemptsTo(OrganizacionDatos.parausuariosexistentes(data));
     }
 
     @Dado("que se desea eliminar un usuario previamente creado con (.*)$")
